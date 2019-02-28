@@ -554,7 +554,7 @@ def iteration(mc,start,app_start,W,Wedges,rounds):
 	return complex,u,moves
 
 
-def randomVF2(n,mc,start,count):
+def randomVF2(mc,start,count):
 	d=start.dimension()
 	c=cross_polytope(d+1, zero_index=True)
 	comp=[]
@@ -569,23 +569,11 @@ def randomVF2(n,mc,start,count):
 	for i in range(count):
 		c0=random_vertex_relabeling(c0)
 		f0=c0.f_vector()[1]
-		if f0<n:
-			dif=n-f0
-			r=numpy.random.binomial(1,0.9)
-			rm=random.choice(range(len(mc[0])))
-			ci=mainVF2(rm,r,mc,c,c0)
-		else:
-			dif2=f0-n
-			#r=numpy.random.binomial(1,0.5)
-			r=0
-			if r==0:
-				rm=random.choice(range(len(mc[0])))
-			else:
-				rm=random.choice(range(len(mc[0])))
-			ci=mainVF2(rm,r,mc,c,c0)
+		r=0
+		rm=random.choice(range(len(mc[0])))
+		ci=mainVF2(rm,r,mc,c,c0)
 		if ci!=0:
 			ind1=range(len(mc[0]))
-			#comp.append(ci)
 			hvec.append(ci.h_vector())
 			fvec.append(ci.f_vector())
 			f1=ci.f_vector()[1]
