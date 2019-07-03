@@ -10,6 +10,7 @@ An extended abstract containing more details on the implementation and the resul
 
 Few slides on this project, presented by Alexander Wang at FPSAC 2019, can be found at https://drive.google.com/file/d/17bSmKuP7XoaJl3V1lpyPtYjzBiiXJMKg/view .
  
-Try it on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nthiery/Cross-flips_and_balanced_library/master?filepath=demo.ipynb).
+
+Try it on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LorenzoVenturello/Cross-flips_and_balanced_library/master?filepath=demo.ipynb).
 
 
